@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="logo" href="index.html">
+            <img class="logo__img" src="images/logo.svg" alt="">
+          </a>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="index.html">ГЛАВНАЯ</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="relevance.html">АКТУАЛЬНОСТЬ</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="tools.html">ИНСТРУМЕНТЫ</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">РЕШЕНИЕ</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">ВЫВОДЫ</a>
+              </li>
+            </ul>
+          </nav>  
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container_table">
+        <table class="risktable">
+          <thead>
+           <caption>МАТРИЦА РИСКОВ</caption>
+           <tr>
+              <th>Риски / Вероятность</th>
+              <th>Высокая (70-100%)</th>
+              <th>Средняя (30-70%)</th>
+              <th>Низкая (0-30%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Риски / Вероятность">Высокие (70-100%)</td>
+              <td data-label="Высокая (70-100%)">Нехватка временных ресурсов, сбои в работе сервисов ИИ, неправильное принятие решений</td>
+              <td data-label="Средняя (30-70%)">Умеренные шибки в данных, технические проблемы, недостаточное понимание работы сервисов ИИ</td>
+              <td data-label="Низкая (0-30%)">Незначительные ошибки в данных, технические проблемы</td>
+            </tr>
+            <tr>
+              <td data-label="Риски / Вероятность">Средние (30-70%)</td>
+              <td data-label="Высокая (70-100%)">Неправильное принятие решений, задержки в работе проекта</td>
+              <td data-label="Средняя (30-70%)">Неэффективное использование сервисов ИИ, неправильное понимание работы сервисов ИИ</td>
+              <td data-label="Низкая (0-30%)">Нехватка человеческих и финансовых ресурсов</td>
+            </tr>
+            <tr>
+              <td data-label="Риски / Вероятность">Низкие (0-30%)</td>
+              <td data-label="Высокая (70-100%)">Задержки в работе проекта</td>
+              <td data-label="Средняя (30-70%)">Недостаточное использование сервисов ИИ, некоторое недопонимание работы сервисов ИИ</td>
+              <td data-label="Низкая (0-30%)">Отсутствие рисков</td>
+            </tr>
+         </tbody>
+        </table>
+      </div>      
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <nav class="footer__menu">
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">ПРЕЗЕНТАЦИЯ</a>
+            </li>
+          </ul>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">БИБЛИОГРАФИЯ</a>
+            </li>
+          </ul>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">КОНТАКТЫ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__copyright">
+        <p class="footer__copyright-text">
+          Интернет-сайт создан в рамках дипломного проекта. Для создания сайта в качестве инструментария менеджера проектов использованы только бесплатные сервисы искусственного интеллекта. Команда проекта: PM + AI. Бюджет проекта 0 рублей. Проект осуществил Дятлов Павел. 2023год.
+        </p>
+      </div>
+    </footer>
+  </div>
+ 
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="logo" href="#">
+            <img class="logo__img" src="images/logo.svg" alt="">
+          </a>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">ГЛАВНАЯ</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">АКТУАЛЬНОСТЬ</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">ИНСТРУМЕНТЫ</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">РЕШЕНИЕ</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">ВЫВОДЫ</a>
+              </li>
+            </ul>
+          </nav>  
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container_table">
+        <table class="risk_register">
+          <thead>
+           <caption>ТАБЛИЦА УПРАВЛЕНИЯ РИСКАМИ</caption>
+           <tr>
+              <th>Риск</th>
+              <th>Вероятность</th>
+              <th>Воздействие</th>
+              <th>Категория риска</th>
+              <th>Описание</th>
+              <th>Стратегия управления рисками</th>
+              <th>Ответственный</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Риск">Нехватка временного ресурса</td>
+              <td data-label="Вероятность">Высокая</td>
+              <td data-label="Воздействие">Критическое</td>
+              <td data-label="Категория риска">Высокий</td>
+              <td data-label="Описание">Нехватка ресурса может привести к задержкам в проекте и/или снижению качества работ</td>
+              <td data-label="Стратегия управления рисками">Увеличение временного ресурса проекта, перераспределение задач между привлекаемыми сервисами ИИ, поиск дополнительных сервисов ИИ</td>
+              <td data-label="Ответственный">Проектный менеджер</td>
+            </tr>
+            <tr>
+              <td data-label="Риск">Ошибки в данных</td>
+              <td data-label="Вероятность">Средняя</td>
+              <td data-label="Воздействие">Умеренное</td>
+              <td data-label="Категория риска">Средний</td>
+              <td data-label="Описание">Ошибки в данных могут привести к неправильным решениям, что может повлиять на результаты проекта</td>
+              <td data-label="Стратегия управления рисками">Проверка достоверности данных полученных от сервисов ИИ, контроль качества данных и повторный анализ данных</td>
+              <td data-label="Ответственный">Проектный менеджер(в роли Аналитика данных)</td>
+            </tr>
+            <tr>
+              <td data-label="Риск">Задержки в работе проекта</td>
+              <td data-label="Вероятность">Средняя</td>
+              <td data-label="Воздействие">Умеренное</td>
+              <td data-label="Категория риска">Средний</td>
+              <td data-label="Описание">Задержки в работе проекта могут привести к срыву сроков проекта</td>
+              <td data-label="Стратегия управления рисками">Выбор сервисов ИИ в пользу более продуктивных, перераспределение задач между используемыми сервисами ИИ, изменение графика работ</td>
+              <td data-label="Ответственный">Проектный менеджер</td>
+            </tr>
+            <tr>
+              <td data-label="Риск">Неэффективное использование сервисов ИИ</td>
+              <td data-label="Вероятность">Средняя</td>
+              <td data-label="Воздействие">Умеренное</td>
+              <td data-label="Категория риска">Средний</td>
+              <td data-label="Описание">Неэффективное использование сервисов ИИ может привести к неправильным решениям, что может повлиять на результаты проекта</td>
+              <td data-label="Стратегия управления рисками">Обучение способам взаимодействия с сервисами ИИ, улучшение качества запросов для сервисов ИИ</td>
+              <td data-label="Ответственный">Проектный менеджер(в роли Специалиста по ИИ</td>
+            </tr>
+            <tr>
+              <td data-label="Риск">Технические проблемы с созданием и функционированием интернет-сайта</td>
+              <td data-label="Вероятность">Низкая</td>
+              <td data-label="Воздействие">Незначительное</td>
+              <td data-label="Категория риска">Низкий</td>
+              <td data-label="Описание">Технические проблемы могут привести к снижению производительности и/или качества работ</td>
+              <td data-label="Стратегия управления рисками">Обучение веб-разработки.  профилактика, регулярный мониторинг  и проверка кода поставляемого сервисами ИИ для создания интернет-сайта. Техническое обслуживание интернет-сайта</td>
+              <td data-label="Ответственный">Проектный менеджер(в роли Технических специалистов разработки и тестирования)</td>
+            </tr>
+         </tbody>
+        </table>
+      </div>      
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <nav class="footer__menu">
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">ПРЕЗЕНТАЦИЯ</a>
+            </li>
+          </ul>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">ИНСТРУМЕНТЫ</a>
+            </li>
+          </ul>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">БИБЛИОГРАФИЯ</a>
+            </li>
+          </ul>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">КОНТАКТЫ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__copyright">
+        <p class="footer__copyright-text">
+          Интернет-сайт создан в рамках дипломного проекта. Для создания сайта в качестве инструментария менеджера проектов использованы только бесплатные сервисы искусственного интеллекта. Команда проекта: PM + AI. Бюджет проекта 0 рублей. Проект осуществил Дятлов Павел. 2023год.
+        </p>
+      </div>
+    </footer>
+  </div>
+ 
+</body>
+</html>
