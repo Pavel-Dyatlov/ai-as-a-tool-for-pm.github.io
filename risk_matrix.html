@@ -9,10 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
 rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
   <div class="wrapper">
     <header class="header">
       <div class="container">
@@ -48,19 +47,45 @@ rel="stylesheet" />
       </div>
     </header>
     <main class="main">
-      <section class="contacts">
-        <div class="container">
-          <h2 class="contacts-title">Вы можете связаться со мной, если у вас есть вопросы или предложения.</h2>
-          <form class="form" action="https://formsubmit.co/8204a44a815f79f1481057c71127c3bc" method="POST">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://pavel-dyatlov.github.io/ai-as-a-tool-for-pm.github.io/contacts_2.html">
-            <input type="text" class="form-input" name="name" placeholder="Имя" required>
-            <input type="text" class="form-input" name="e-mail" placeholder="E-mail" required>
-            <textarea class="form-textarea" name="comments" placeholder="Ваш текст" required></textarea>
-            <button class="send" type="submit">ОТПРАВИТЬ</button>
-          </form>
-        </div>
-      </section> 
+      <div class="container_table">
+        <table class="risktable">
+          <caption>МАТРИЦА РИСКОВ</caption>
+          <thead>
+           <tr>
+              <th>Номер</th>
+              <th>Название</th>
+              <th>Вероятность/Воздействие</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Номер">1</td>
+              <td data-label="Название">Ошибки в данных полученных от сервисов ИИ</td>
+              <td data-label="Вероятность/Воздействие">высокая/критическое</td>
+            </tr>
+            <tr>
+              <td data-label="Номер">2</td>
+              <td data-label="Название">Технические проблемы</td>
+              <td data-label="Вероятность/Воздействие">высокая/критическое</td>
+            </tr>
+            <tr>
+              <td data-label="Номер">3</td>
+              <td data-label="Название">Нехватка временного ресурса</td>
+              <td data-label="Вероятность/Воздействие">высокая/среднее</td>
+            </tr>
+            <tr>
+              <td data-label="Номер">4</td>
+              <td data-label="Название">Задержки в работе</td>
+              <td data-label="Вероятность/Воздействие">средняя/умеренное</td>
+            </tr>
+            <tr>
+              <td data-label="Номер">5</td>
+              <td data-label="Название">Неэффективное использование сервисов ИИ</td>
+              <td data-label="Вероятность/Воздействие">средняя/умеренное</td>
+            </tr>
+         </tbody>
+        </table>
+      </div>      
     </main>
     <footer class="footer">
       <div class="container">
