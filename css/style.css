@@ -124,7 +124,7 @@ body {
 
 /* стили для Сайт создан при нулевом бюджете с помощью ИИ!*/
 .title {
-  padding-bottom: 40px;
+  padding-bottom: 50px;
   font-size: 60px;
   font-weight: 700;
 }
@@ -159,7 +159,7 @@ body {
 
 /*Стили ссылок*/
 .links {
-  padding: 150px 0;
+  padding: 50px 0;
 }
 
 .links-list {
@@ -210,24 +210,20 @@ table.risktable td {
 }
 
 
-table.risktable tr:nth-child(1)>td:nth-child(2) {
+table.risktable tr:nth-child(1)>td:nth-child(2),
+table.risktable tr:nth-child(2)>td:nth-child(2) {
   background-color: #ff0000;
   font-weight: 400;
 }
 
-table.risktable tr:nth-child(2)>td:nth-child(3),
-table.risktable tr:nth-child(2)>td:nth-child(2),
-table.risktable tr:nth-child(3)>td:nth-child(2),
-table.risktable tr:nth-child(1)>td:nth-child(3),
-table.risktable tr:nth-child(1)>td:nth-child(4) {
-  background-color: #ffff00;
+table.risktable tr:nth-child(3)>td:nth-child(2) {
+  background-color: #ff9d00;
   font-weight: 400;
 }
 
-table.risktable tr:nth-child(3)>td:nth-child(3),
-table.risktable tr:nth-child(3)>td:nth-child(4),
-table.risktable tr:nth-child(2)>td:nth-child(4) {
-  background-color: #00ff00;
+table.risktable tr:nth-child(4)>td:nth-child(2),
+table.risktable tr:nth-child(5)>td:nth-child(2) {
+  background-color: #ffff00;
   font-weight: 400;
 }
 
@@ -302,151 +298,162 @@ p {
 }
 
 /* Стили диаграмы Ганта*/
-.container-gant {
-  max-width: 1200px;
-  min-width: 650px;
-  margin: 0 auto;
-  padding: 50px;
-  box-sizing: border-box;
+.gantt .grid-background {
+  fill: none;
 }
-
-.chart-gant {
-  display: grid;
-  border: 2px solid #000000;
-  position: relative;
-  overflow: hidden;
+.gantt .grid-header {
+  fill: #ffffff;
+  stroke: #e0e0e0;
+  stroke-width: 1.4;
 }
-
-.chart-row {
-  display: grid;
-  grid-template-columns: 50px 1fr;
-  background-color: #DCDCDC;
+.gantt .grid-row {
+  fill: #ffffff;
 }
-
-.chart-row:nth-child(odd) {
-  background-color: #C0C0C0;
+.gantt .grid-row:nth-child(even) {
+  fill: #f5f5f5;
 }
-
-.chart-period {
-  color: #ffffff;
-  background-color: #708090 !important;
-  border-bottom: 2px solid #000000;
-  grid-template-columns: 50px repeat(12, 1fr);
+.gantt .row-line {
+  stroke: #ebeff2;
 }
-
-.chart-lines {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: transparent;
-  grid-template-columns: 50px repeat(12, 1fr);
+.gantt .tick {
+  stroke: #e0e0e0;
+  stroke-width: 0.2;
 }
-
-.chart-period>span {
-  text-align: center;
+.gantt .tick.thick {
+  stroke-width: 0.4;
+}
+.gantt .today-highlight {
+  fill: #fcf8e3;
+  opacity: 0.5;
+}
+.gantt .arrow {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.4;
+}
+.gantt .bar {
+  fill: #b8c2cc;
+  stroke: #8D99A6;
+  stroke-width: 0;
+  transition: stroke-width 0.3s ease;
+  user-select: none;
+}
+.gantt .bar-progress {
+  fill: #a3a3ff;
+}
+.gantt .bar-invalid {
+  fill: transparent;
+  stroke: #8D99A6;
+  stroke-width: 1;
+  stroke-dasharray: 5;
+}
+.gantt .bar-invalid ~ .bar-label {
+  fill: #555;
+}
+.gantt .bar-label {
+  fill: #fff;
+  dominant-baseline: central;
+  text-anchor: middle;
   font-size: 12px;
-  align-self: center;
-  font-weight: 700;
-  padding: 15px 0;
+  font-weight: lighter;
 }
-
-.chart-lines>span {
-  display: block;
-  border-right: 1px solid #000000;
+.gantt .bar-label.big {
+  fill: #555;
+  text-anchor: start;
 }
-
-.chart-row-item {
-  background-color: #808080;
-  border: 1px solid #000000;
-  border-top: 0;
-  border-left: 0;
-  padding: 20px 0;
-  font-size: 14px;
-  font-weight: 700;
-  text-align: center;
+.gantt .handle {
+  fill: #ddd;
+  cursor: ew-resize;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
 }
-
-.chart-row-bars {
-  list-style: none;
-  display: grid;
-  padding: 15px 0;
-  margin: 0;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 10px 0;
-  border-bottom: 1px solid #000000;
-}
-
-.chart-row li {
-  font-weight: 400;
-  text-align: left;
-  font-size: 12px;
-  min-height: 15px;
-  background-color: #708090;
-  padding: 5px 15px;
-  color: #fff;
-  overflow: hidden;
-  position: relative;
+.gantt .bar-wrapper {
   cursor: pointer;
-  border-radius: 15px;
+  outline: none;
+}
+.gantt .bar-wrapper:hover .bar {
+  fill: #a9b5c1;
+}
+.gantt .bar-wrapper:hover .bar-progress {
+  fill: #8a8aff;
+}
+.gantt .bar-wrapper:hover .handle {
+  visibility: visible;
+  opacity: 1;
+}
+.gantt .bar-wrapper.active .bar {
+  fill: #a9b5c1;
+}
+.gantt .bar-wrapper.active .bar-progress {
+  fill: #8a8aff;
+}
+.gantt .lower-text, .gantt .upper-text {
+  font-size: 12px;
+  text-anchor: middle;
+}
+.gantt .upper-text {
+  fill: #555;
+}
+.gantt .lower-text {
+  fill: #333;
+}
+.gantt .hide {
+  display: none;
 }
 
-ul .chart-li-one {
-  grid-column: 1/2;
-  background-color: #588BAE;
+.gantt-container {
+  position: relative;
+  overflow: auto;
+  font-size: 12px;
 }
-
-ul .chart-li-two-a {
-  grid-column: 2/2;
-  background-color: #0080FF;
+.gantt-container .popup-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0;
+  color: #959da5;
+  border-radius: 3px;
 }
-
-ul .chart-li-two-b {
-  grid-column: 2/2;
-  background-color: #4682B4;
+.gantt-container .popup-wrapper .title {
+  border-bottom: 3px solid #a3a3ff;
+  padding: 10px;
 }
-
-ul .chart-li-three {
-  grid-column: 3/5;
-  background-color: #57A0D3;
+.gantt-container .popup-wrapper .subtitle {
+  padding: 10px;
+  color: #dfe2e5;
 }
-
-ul .chart-li-four {
-  grid-column: 5/7;
-  background-color: #0E4D92;
-}
-
-ul .chart-li-five {
-  grid-column: 7/9;
-  background-color: #4F97A3;
-}
-
-ul .chart-li-six-a {
-  grid-column: 9/13;
-  background-color: #73C2FB;
-}
-
-ul .chart-li-six-b {
-  grid-column: 9/13;
-  background-color: #0080FF;
+.gantt-container .popup-wrapper .pointer {
+  position: absolute;
+  height: 5px;
+  margin: 0 0 0 -5px;
+  border: 5px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.8);
 }
 
 /*Стили страницы контакты*/
 
 .contacts {
-  padding: 100px 0 150px;
+  padding: 50px 0 50px;
 }
 
 .contacts-title {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: 0;
   text-align: center;
+  color: #5aa69d;
 }
 
-.contacts-text {
+.contacts-title-2{
   text-align: center;
+  color: #5aa69d;
+  margin: 150px 0 150px;
+}
+
+.contacts-title h2 {
+  font-size: 26px;
   font-weight: 700;
-  font-size: 24px;
-  margin-bottom: 50px;
-  padding: 0 100px;
 }
 
 form {
@@ -476,7 +483,7 @@ form {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.3;
-  color: black;
+  color: #000000;
   opacity: 0.5;
 }
 
@@ -497,42 +504,211 @@ form {
 .send {
   text-transform: uppercase;
   color: #ffffff;
-  background-color: #000000;
+  background-color: #3f84d9;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 400;
   padding: 13px 61px;
   margin: 0 auto;
+  border: none;
+}
+
+.menu-toggle{
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  border: none;
+  border-color: transparent;
+  background-color: transparent;
+  display: none;
+}
+
+.menu-toggle span{
+  height: 2px;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.container-text img{
+    max-width: 90%;
+  }
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
 
 /* Медиа-запрос для адаптации под мобильные устройства */
-@media screen and (max-width: 600px) {
-  body {
-    font-size: 16px;
-  }
+@media (max-width: 1000px){
+  .title {
+    font-size: 35px;
+    font-weight: 700;
 }
+
+}
+
+
+@media (max-width: 890px){
+  .menu-toggle{
+    display: flex;
+  }
+  .menu-toggle,
+  .logo{
+    position: relative;
+    z-index: 10;
+  }
+  .menu__list{
+    position: absolute;
+    z-index: 5;
+    background-color: #5aa69d;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 200px;
+    height: 100vh;
+    transform: translateY(-100%);
+    transition: transform .3s ease;
+  }
+
+  .menu__list.menu__list--active{
+    transform: translateY(0%);
+  }
+
+  .links-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .footer__copyright p {
+    font-size: 12px;
+ }
+
+}
+
+
 
 @media (max-width: 720px) {
 
-  .container_table table thead {
+  table thead {
     display: none;
   }
 
-  .container_table table tr {
+  table tr {
     display: block;
   }
 
-  .container_table table td {
+  table td {
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
+    font-size: 12px;
   }
 
-  .container_table table td::before {
+  table td::before {
     content: attr(data-label);
-    font-weight: 700;
+    font-weight: 400;
     margin-right: 20px;
   }
 
+}
+
+@media (max-width: 620px){
+  .footer__menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+ }
+  .title {
+    padding-bottom: 40px;
+    font-size: 40px;
+    font-weight: 700;
+ }
+  .swiper-pagination-bullet {
+    width: 60px;
+ }
+  .swiper-pagination-bullet-active {
+    height: 3px;
+ }
+
+  .form-input{
+    width: 100%;
+    margin-bottom: 25px;
+ }
+}
+
+@media (max-width: 400px){
+  .links-list {
+    grid-template-columns: repeat(1, 1fr);  
+ }
+  .title {
+    font-size: 25px;
+ }
+ 
 }
