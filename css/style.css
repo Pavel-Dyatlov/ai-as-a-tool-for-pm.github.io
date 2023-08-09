@@ -96,6 +96,11 @@ body {
   margin-bottom: 50px;
   font-size: 15px;
   font-weight: 700;
+  color: #ffffff;
+}
+
+.footer__menu-link{
+  color: #ffffff; 
 }
 
 .footer__copyright {
@@ -103,6 +108,10 @@ body {
   margin: 0 auto 30px;
   text-align: center;
   font-size: 12px;
+}
+
+.footer__copyright-text{
+  color: #ffffff;
 }
 
 .main {
@@ -610,6 +619,9 @@ form {
     font-size: 35px;
     font-weight: 700;
 }
+ .h2{
+text-align: left;
+}
 
 }
 
@@ -649,7 +661,11 @@ form {
   }
   .footer__copyright p {
     font-size: 12px;
+    color: #ffffff;
  }
+ .h2{
+  text-align: left;
+  }
 
 }
 
@@ -676,6 +692,9 @@ form {
     font-weight: 400;
     margin-right: 20px;
   }
+  .h2{
+    text-align: left;
+    }
 
 }
 
@@ -684,6 +703,7 @@ form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+    color: #ffffff;
  }
   .title {
     padding-bottom: 40px;
@@ -701,6 +721,9 @@ form {
     width: 100%;
     margin-bottom: 25px;
  }
+ .h2{
+  text-align: left;
+  }
 }
 
 @media (max-width: 400px){
@@ -710,5 +733,8 @@ form {
   .title {
     font-size: 25px;
  }
- 
+
+ .h2{
+  text-align: left;
+  }
 }
